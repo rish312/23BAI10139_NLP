@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLP Insight Explorer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+    
+    <main class="glass-panel main-container">
+        <header>
+            <h1>NLP Insight Explorer</h1>
+            <p>Experience state-of-the-art Summarization & Sentiment Analysis powered by Hugging Face Transformers.</p>
+        </header>
+        
+        <section class="input-section">
+            <label for="text-input">Enter text to analyze:</label>
+            <textarea id="text-input" placeholder="Paste an article, review, or any long text here..."></textarea>
+            
+            <div class="actions">
+                <button id="btn-analyze" class="btn-primary">
+                    <span class="btn-text">Analyze Insights</span>
+                    <div class="loader hidden"></div>
+                </button>
+            </div>
+        </section>
+        
+        <section id="results-section" class="results-section hidden">
+            <div class="result-card">
+                <h3>Sentiment</h3>
+                <div class="sentiment-indicator" id="sentiment-indicator">
+                    <span class="emoji" id="sentiment-emoji">🤔</span>
+                    <span class="label" id="sentiment-label">Loading...</span>
+                    <div class="score-bar-container">
+                        <div class="score-bar" id="score-bar"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="result-card">
+                <h3>Summary</h3>
+                <p id="summary-text" class="summary-text">...</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
